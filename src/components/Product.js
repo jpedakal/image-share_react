@@ -1,13 +1,11 @@
 import React from 'react'
-import Card from 'react-bootstrap'
-import products from '../products'
+import { Card } from 'react-bootstrap'
 
-const Product = () => {
+const Product = ({ product }) => {
     return (
         <Card className='my-3 p-3 rounded'>
             <a href={`/product/${product._id}`} >
-                <Card.img src={product.image} variant={top} />
-
+                <Card.Img src={product.image} variant='top' />
             </a>
         </Card>
     )
