@@ -67,7 +67,7 @@ const products = [
   {
     _id: '6',
     name: 'Amazon Echo Dot 3rd Generation',
-    image: '/images/alexa.jpg',
+    image: '/images/urvasi.jpg',
     description:
       'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
     brand: 'Amazon',

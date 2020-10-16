@@ -6,9 +6,35 @@ import products from '../products'
 
 
 const ProductScreen = ({ match }) => {
-    console.log('value',match.params)
     const product = products.find((p) => p._id === match.params.id)
-    return <div>{product.name}</div>
+    return (
+        <div>
+            <Link className='btn btn-dark my-3' to='/'>Go Back</Link>
+            <Row>
+                <Col md={6}>
+                    <Image src={product.image} alt={product.name} fluid />
+                </Col>
+                <Col md={3}>
+                    <ListGroup variant='flush'>
+                        <ListGroup.Item>
+                            {product.name}
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Rating value={product.rating}
+                                text={`${product.numReviews} reviews`}
+                            />
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <h2>{`$${product.price}`}</h2>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <p>{product.description}</p>
+                        </ListGroup.Item>
+                    </ListGroup>
+                </Col>
+            </Row>
+        </div>
+    )
 }
 
 export default ProductScreen
