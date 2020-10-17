@@ -37,8 +37,7 @@ const ProductScreen = ({ match }) => {
                         <ListGroup variant='flush' >
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Price:
-                                          </Col>
+                                    <Col>Price:</Col>
                                     <Col>
                                         <strong>${product.price}</strong>
                                     </Col>
