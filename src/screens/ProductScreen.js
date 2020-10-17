@@ -32,6 +32,13 @@ const ProductScreen = ({ match }) => {
                         </ListGroup.Item>
                     </ListGroup>
                 </Col>
+                <Col md={3}>
+                    <ListGroup variant='flush'>
+                        <ListGroup.Item>
+                            <h2>{`$${product.price}`}</h2>
+                        </ListGroup.Item>
+                    </ListGroup>
+                </Col>
             </Row>
         </div>
     )
