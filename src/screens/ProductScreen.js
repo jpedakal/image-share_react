@@ -43,6 +43,14 @@ const ProductScreen = ({ match }) => {
                                     </Col>
                                 </Row>
                             </ListGroup.Item>
+                            <ListGroup.Item>
+                                <Row>
+                                    <Col>Price:</Col>
+                                    <Col>
+                                        <strong>${product.price}</strong>
+                                    </Col>
+                                </Row>
+                            </ListGroup.Item>
                         </ListGroup>
                     </Card>
                 </Col>
