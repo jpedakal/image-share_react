@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import products from '../products'
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 
 const ProductScreen = ({ match }) => {
@@ -45,10 +46,24 @@ const ProductScreen = ({ match }) => {
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Price:</Col>
+                                    <Col>Status:</Col>
                                     <Col>
-                                        <strong>${product.price}</strong>
+                                        {product.countInStock > 0 ? 'In Stock' : 'Out of Stock'}
                                     </Col>
+                                </Row>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <Row>
+                                    <Button className='btn btn-warning btn-block' type='button' disabled={product.countInStock === 0}>
+                                    <Nav.Link><i className='fas fa-shopping-cart'></i>  ADD TO CART</Nav.Link>
+                                    </Button>
+                                </Row>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <Row>
+                                    <Button className='btn btn-success btn-block' type='button' disabled={product.countInStock === 0}>
+                                    <Nav.Link><i className='fas fa-shopping-cart'></i>  BUY NOW</Nav.Link>
+                                    </Button>
                                 </Row>
                             </ListGroup.Item>
                         </ListGroup>
