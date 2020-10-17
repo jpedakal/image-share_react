@@ -25,12 +25,27 @@ const ProductScreen = ({ match }) => {
                             />
                         </ListGroup.Item>
                         <ListGroup.Item>
-                          Price: ${product.price}
+                            Price: ${product.price}
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <p>{product.description}</p>
+                            Description: {product.description}
                         </ListGroup.Item>
                     </ListGroup>
+                </Col>
+                <Col md={3}>
+                    <Card>
+                        <ListGroup variant='flush' >
+                            <ListGroup.Item>
+                                <Row>
+                                    <Col>Price:
+                                          </Col>
+                                    <Col>
+                                        <strong>${product.price}</strong>
+                                    </Col>
+                                </Row>
+                            </ListGroup.Item>
+                        </ListGroup>
+                    </Card>
                 </Col>
             </Row>
         </div>
