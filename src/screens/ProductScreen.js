@@ -17,7 +17,7 @@ const ProductScreen = ({ match }) => {
         }
 
         fetchProducts()
-    },[match])
+    }, [match])
 
     return (
         <div>
